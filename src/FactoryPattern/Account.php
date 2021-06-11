@@ -1,6 +1,8 @@
 <?php
 
-namespace DesignPattern;
+namespace DesignPattern\FactoryPattern;
+
+use Exception;
 
 /**
  * Class CheckingAccount
@@ -14,7 +16,7 @@ abstract class Account implements AccountInterface
     protected float $balance;
 
     /**
-     * CheckingAccount constructor.
+     * Account constructor.
      */
     function __construct()
     {
@@ -25,23 +27,32 @@ abstract class Account implements AccountInterface
      * @param float $value
      * @return float
      */
-    public function deposit(float $value): float
+    function deposit(float $value): float
     {
         $this->balance += $value;
         return $this->balance;
     }
 
     /**
-     * @param float $value
      * @return float
      */
-    abstract function draw(float $value): float;
+    function balance(): float
+    {
+        return $this->balance;
+    }
 
     /**
+     * @param float $value
      * @return float
+     * @throws \Exception
      */
-    public function balance(): float
+    function draw(float $value): float
     {
+        if ($value > $this->balance) {
+            throw new Exception ("Your balance isn't enough, you have only: $this->balance. Can't withdraw: " . $value);
+        }
+
+        $this->balance -= $value;
         return $this->balance;
     }
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace DesignPattern;
+namespace DesignPattern\FactoryPattern;
 
 /**
  * Interface AccountInterface
@@ -16,9 +16,9 @@ interface AccountInterface
 
     /**
      * @param float $value
-     * @return mixed
+     * @return float
      */
-    public function draw(float $value): float;
+    function draw(float $value): float;
 
     /**
      * @return float
