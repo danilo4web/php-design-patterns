@@ -6,7 +6,7 @@ use Exception;
 
 /**
  * Class AccountFactory
- * @package DesignPattern
+ * @package DesignPattern\FactoryPattern
  */
 class AccountFactory
 {
@@ -15,7 +15,7 @@ class AccountFactory
      * @return mixed
      * @throws \Exception
      */
-    public static function create(string $type): AccountInterface
+    public static function create(string $type)
     {
         $className = __NAMESPACE__ . '\\' . $type . 'Account';
 

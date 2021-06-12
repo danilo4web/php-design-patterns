@@ -6,28 +6,22 @@ use Exception;
 
 /**
  * Class CheckingAccount
- * @package DesignPattern
+ * @package DesignPattern\FactoryPattern
  */
-class CheckingAccount extends Account
+class CheckingAccount extends AccountAbstract implements CheckingAccountInterface
 {
-    protected float $limit = 0;
+    private float $limit = 0;
 
     /**
-     * @param float $limit
-     * @throws \Exception
+     * @inheritDoc
      */
     public function setLimit(float $limit): void
     {
-        if ($this->limit != 0) {
-            throw new Exception('Limit already defined');
-        }
-
         $this->limit = $limit;
-        self::defineBalanceWithLimit();
     }
 
     /**
-     * @return float
+     * @inheritDoc
      */
     public function getLimit(): float
     {
@@ -35,10 +29,28 @@ class CheckingAccount extends Account
     }
 
     /**
-     * @return void
+     * @param float $value
+     * @return float
+     * @throws \Exception
      */
-    private function defineBalanceWithLimit(): void
+    public function draw(float $value): float
     {
-        $this->balance += $this->getLimit();
+        $balance = $this->getBalance();
+        $limit = $this->getLimit();
+        $balanceWithLimit = $balance + $limit;
+
+        if ($value > $balanceWithLimit) {
+            throw new Exception(
+                "Request was denied!" . PHP_EOL .
+                "Your balance is: $balance" . PHP_EOL .
+                "Your limit is: $limit" . PHP_EOL .
+                "Can't withdraw: " . $value
+            );
+        }
+
+        $newBalance = $balance - $value;
+        $this->setBalance($newBalance);
+
+        return $this->getBalance();
     }
 }
