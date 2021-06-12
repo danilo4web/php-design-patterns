@@ -2,6 +2,8 @@
 
 namespace DesignPattern\FactoryPattern;
 
+use Exception;
+
 /**
  * Class AccountAbstract
  * @package DesignPattern\FactoryPattern
@@ -54,7 +56,7 @@ abstract class AccountAbstract
     /**
      * @param float $value
      * @return float
-     * @throws \Exception
+     * @throws Exception
      */
     abstract protected function draw(float $value): float;
 }

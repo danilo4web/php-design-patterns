@@ -13,7 +13,7 @@ class AccountFactory
     /**
      * @param string $type
      * @return mixed
-     * @throws \Exception
+     * @throws Exception
      */
     public static function create(string $type)
     {
