@@ -10,9 +10,15 @@
     "require": {
         "php": "^7.4"
     },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "3.*"
+    },
     "autoload": {
         "psr-4": {
             "DesignPattern\\": "src"
         }
+    },
+    "scripts": {
+        "check-psr12": "phpcs --standard=PSR12 src"
     }
 }

@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace DesignPattern;
 
 use DesignPattern\StrategyPattern\StoreFile;
@@ -8,7 +10,7 @@ use Exception;
 class StrategyPattern
 {
     /**
-     * @return void
+     * @param $storage
      */
     public function storeFiles($storage): void
     {
@@ -17,8 +19,7 @@ class StrategyPattern
 
             $storage = new StoreFile($storage);
             $storage->store($file);
-
-        } catch(Exception $exception) {
+        } catch (Exception $exception) {
             echo $exception->getMessage();
         }
     }

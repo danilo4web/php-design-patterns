@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace DesignPattern\FactoryPattern;
 
 use Exception;
@@ -19,7 +21,7 @@ class SavingAccount extends AccountAbstract implements SavingAccountInterface
     {
         $balance = $this->getBalance();
         if ($value > $balance) {
-            throw new Exception ("Balance isn't enough, you have only: $balance. Can't withdraw: " . $value);
+            throw new Exception("Balance isn't enough, you have only: $balance. Can't withdraw: " . $value);
         }
 
         $newBalance = $balance - $value;
