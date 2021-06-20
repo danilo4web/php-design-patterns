@@ -4,26 +4,18 @@ declare(strict_types=1);
 
 namespace DesignPattern\StrategyPattern;
 
-use Exception;
+use InvalidArgumentException;
 
-/**
- * Class StorageFactory
- * @package DesignPattern\StrategyPattern
- */
-abstract class StorageFactory
+class StorageFactory
 {
-    /**
-     * @param $storeType
-     * @return mixed
-     * @throws \Exception
-     */
-    public function build($storeType)
+    public function build(string $storageService): Storage
     {
-        $className = __NAMESPACE__ . '\\' . $storeType . 'Storage';
-        if (!class_exists($className)) {
-            throw new Exception("$className does not exist");
+        $storageStrategy = __NAMESPACE__ . '\\' . $storageService . 'StorageStrategy';
+
+        if (!class_exists($storageStrategy)) {
+            throw new InvalidArgumentException("$storageStrategy does not exist");
         }
 
-        return (new $className());
+        return new Storage(new $storageStrategy());
     }
 }

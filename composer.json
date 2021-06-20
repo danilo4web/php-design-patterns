@@ -8,14 +8,17 @@
         }
     ],
     "require": {
-        "php": "^7.4"
+        "php": "^8.0"
     },
     "require-dev": {
-        "squizlabs/php_codesniffer": "3.*"
+        "squizlabs/php_codesniffer": "3.*",
+        "phpunit/phpunit": "^9.5"
     },
     "autoload": {
         "psr-4": {
-            "DesignPattern\\": "src"
+            "DesignPattern\\": "src",
+            "Tests\\Integration\\": "tests/integration/",
+            "Tests\\Unit\\": "tests/unit/"
         }
     },
     "scripts": {
