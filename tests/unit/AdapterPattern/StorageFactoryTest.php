@@ -1,9 +1,9 @@
 <?php
 
-namespace Tests\Unit\StrategyPattern;
+namespace Tests\Unit\AdapterPattern;
 
-use DesignPattern\StrategyPattern\Storage;
-use DesignPattern\StrategyPattern\StorageFactory;
+use DesignPattern\AdapterPattern\Storage;
+use DesignPattern\AdapterPattern\StorageFactory;
 use InvalidArgumentException;
 use PHPUnit\Framework\TestCase;
 

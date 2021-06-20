@@ -1,9 +1,9 @@
 <?php
 
-namespace Tests\Unit\StrategyPattern;
+namespace Tests\Unit\AdapterPattern;
 
-use DesignPattern\StrategyPattern\Storage;
-use DesignPattern\StrategyPattern\StorageInterface;
+use DesignPattern\AdapterPattern\Storage;
+use DesignPattern\AdapterPattern\StorageInterface;
 use PHPUnit\Framework\TestCase;
 
 class StorageTest extends TestCase

@@ -1,8 +1,8 @@
 <?php
 
-namespace Tests\Unit\StrategyPattern;
+namespace Tests\Unit\AdapterPattern;
 
-use DesignPattern\StrategyPattern\S3StorageAdapter;
+use DesignPattern\AdapterPattern\S3StorageAdapter;
 use PHPUnit\Framework\TestCase;
 
 class S3StorageAdapterTest extends TestCase

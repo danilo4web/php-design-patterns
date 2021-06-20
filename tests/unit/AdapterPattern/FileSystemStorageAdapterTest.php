@@ -1,8 +1,8 @@
 <?php
 
-namespace Tests\Unit\StrategyPattern;
+namespace Tests\Unit\AdapterPattern;
 
-use DesignPattern\StrategyPattern\FileSystemStorageAdapter;
+use DesignPattern\AdapterPattern\FileSystemStorageAdapter;
 use PHPUnit\Framework\TestCase;
 
 class FileSystemStorageAdapterTest extends TestCase

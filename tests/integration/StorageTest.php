@@ -2,7 +2,7 @@
 
 namespace Tests\Integration;
 
-use DesignPattern\StrategyPattern\StorageFactory;
+use DesignPattern\AdapterPattern\StorageFactory;
 use InvalidArgumentException;
 use PHPUnit\Framework\TestCase;
 

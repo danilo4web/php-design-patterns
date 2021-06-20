@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace DesignPattern\StrategyPattern;
+namespace DesignPattern\AdapterPattern;
 
 use InvalidArgumentException;
 

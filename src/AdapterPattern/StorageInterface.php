@@ -1,6 +1,6 @@
 <?php
 
-namespace DesignPattern\StrategyPattern;
+namespace DesignPattern\AdapterPattern;
 
 interface StorageInterface
 {

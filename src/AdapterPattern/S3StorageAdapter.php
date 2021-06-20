@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace DesignPattern\StrategyPattern;
+namespace DesignPattern\AdapterPattern;
 
 class S3StorageAdapter implements StorageInterface
 {
