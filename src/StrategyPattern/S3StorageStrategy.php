@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace DesignPattern\AdapterPattern;
+namespace DesignPattern\StrategyPattern;
 
-class S3StorageAdapter implements StorageInterface
+class S3StorageStrategy implements StorageInterface
 {
     private string $key;
     private string $secret;

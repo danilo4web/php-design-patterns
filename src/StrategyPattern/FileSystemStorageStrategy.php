@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace DesignPattern\AdapterPattern;
+namespace DesignPattern\StrategyPattern;
 
-class FileSystemStorageAdapter implements StorageInterface
+class FileSystemStorageStrategy implements StorageInterface
 {
     public function store(string $file): bool
     {
