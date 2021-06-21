@@ -11,8 +11,9 @@
         "php": "^8.0"
     },
     "require-dev": {
-        "squizlabs/php_codesniffer": "3.*",
-        "phpunit/phpunit": "^9.5"
+        "phpunit/phpunit": "^9.5",
+        "phpunit/php-code-coverage": "^9.2.3",
+        "squizlabs/php_codesniffer": "3.*"
     },
     "autoload": {
         "psr-4": {
@@ -22,6 +23,8 @@
         }
     },
     "scripts": {
-        "check-psr12": "phpcs --standard=PSR12 src"
+        "check-psr12": "phpcs --standard=PSR12 src",
+        "test": "phpunit --colors=always",
+        "test-coverage-html": "XDEBUG_MODE=coverage phpunit --colors=always --coverage-html code-coverage"
     }
 }

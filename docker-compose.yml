@@ -1,0 +1,23 @@
+version: "3"
+services:
+  ngnix:
+    image: nginx:alpine
+    container_name: php-design-patterns__nginx
+    volumes:
+      - ./:/app:delegated
+      - ./docker/nginx.conf:/etc/nginx/conf.d/default.conf:delegated
+    ports:
+      - "8081:80"
+    expose:
+      - "80"
+    depends_on:
+      - php
+
+  php:
+    build: .
+    container_name: php-design-patterns__php
+    volumes:
+      - ./:/app:delegated
+    environment:
+      LOG_LEVEL: "debug"
+      DEBUG: "true"
