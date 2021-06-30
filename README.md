@@ -1,6 +1,22 @@
 # php-design-patterns
 
-Repository to study some design patterns in PHP
+<h4>This is a repository to study and implement some design patterns in PHP.</h4>
 
-Some design patterns already implemented:
-- factory method
+Design patterns are typical solutions to common problems.
+
+Catalog of patterns already implemented in this repository with examples:
+
+Creational Design Patterns:
+```
+- Factory Method
+```
+
+Structural Design Patterns
+```
+- Adapter
+```
+
+Behavioral Design Patterns
+```
+- Strategy
+```
