@@ -9,9 +9,9 @@ use DesignPattern\StrategyPattern\StorageFactory;
 try {
     $file = '/home/danilo/remetentes.csv';
 
-    $myFactoryMethod = new StorageFactory();
-    $myStorage = $myFactoryMethod->build("FileSystem");
-    $myStorage->store($file);
+    $storageFactory = new StorageFactory();
+    $storage = $storageFactory->build("FileSystem");
+    $storage->store($file);
 } catch (Exception $e) {
     echo $e->getMessage();
 }
