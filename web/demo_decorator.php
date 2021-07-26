@@ -2,7 +2,6 @@
 
 require __DIR__ . '/../vendor/autoload.php';
 
-
 use DesignPattern\DecoratorPattern\ComponentInterface;
 use DesignPattern\DecoratorPattern\ConcreteComponent;
 use DesignPattern\DecoratorPattern\ConcreteDecoratorA;
