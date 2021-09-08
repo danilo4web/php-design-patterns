@@ -14,6 +14,7 @@ Creational Design Patterns:
 Structural Design Patterns
 ```
 - Adapter
+- Facade
 ```
 
 Behavioral Design Patterns
